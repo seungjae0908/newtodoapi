@@ -146,7 +146,7 @@ public class UserController {
     }
 
     @GetMapping("/kakaologin")
-    public ResponseEntity<?> kakaoLogin(String code) {
+    public ResponseEntity<?> kakaoLogin(String authCode) {
         log.info("/api/auth/kakaoLogin - GET! code: {}", code);
         userService.kakaoService(code);
     }
